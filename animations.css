@@ -1,1 +1,46 @@
- 
+/* Base animation preparation */
+.animate-prepare {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Fade Up Animation */
+.animate-fade-up {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Fade In Animation */
+.animate-fade-in {
+    opacity: 1;
+    transform: none;
+}
+
+/* Scale In Animation */
+.animate-scale-in {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Slide Animations */
+.animate-slide-left {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.animate-slide-right {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Stagger children animations */
+.stagger-children > * {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.stagger-children > *:nth-child(1) { transition-delay: 0.1s; }
+.stagger-children > *:nth-child(2) { transition-delay: 0.2s; }
+.stagger-children > *:nth-child(3) { transition-delay: 0.3s; } 
